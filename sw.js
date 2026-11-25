@@ -1,6 +1,6 @@
-// Gopin ERP service worker: lets the app install on phones and open instantly.
+// Human Tech service worker: lets the app install on phones and open instantly.
 // ERP data (/api, /ws) is never cached — it always comes live from the server.
-const CACHE = 'gopin-erp-v43';
+const CACHE = 'Human Tech-v43';
 const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/vendor/xlsx.full.min.js',
   '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png'];
 
