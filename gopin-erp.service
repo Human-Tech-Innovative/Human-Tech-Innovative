@@ -2,7 +2,7 @@
 # Copy to /etc/systemd/system/gopin-erp.service, then:
 #   sudo systemctl daemon-reload && sudo systemctl enable --now gopin-erp
 [Unit]
-Description=Gopin Semicon ERP
+Description=Human Tech Innovative Technology
 After=network.target postgresql.service
 
 [Service]
