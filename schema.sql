@@ -1,4 +1,4 @@
--- Gopin Semicon ERP — database schema (PostgreSQL 14+)
+-- Human Tech ERP — database schema (PostgreSQL 14+)
 -- Safe to run many times: every statement is IF NOT EXISTS.
 
 -- People who can sign in
