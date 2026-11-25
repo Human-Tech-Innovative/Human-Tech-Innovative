@@ -1,4 +1,4 @@
-/* Gopin ERP — roles and permissions.
+/* Human Tech — roles and permissions.
    Shared by the server (require('./roles')) and the browser (<script src="/roles.js">),
    so both always apply exactly the same rules. */
 (function (root, factory) {
