@@ -419,7 +419,7 @@ label.tg{display:flex;align-items:center;gap:6px;text-transform:none;letter-spac
 <body>
 <div id="login" hidden>
   <div class="lcard">
-    <div class="brand" id="lbrand"><div class="mark">GS</div><div><b>Gopin Semicon Private Limited</b><small>Manufacturing ERP · sign in</small></div></div>
+    <div class="brand" id="lbrand"><div class="mark">GS</div><div><b>Human Tech Innovative Technology</b><small>Manufacturing ERP · sign in</small></div></div>
     <form id="loginForm" autocomplete="on">
       <div class="fld"><label for="lemail">Email</label><input id="lemail" type="email" autocomplete="username" required></div>
       <div class="fld"><label for="lpass">Password</label><input id="lpass" type="password" autocomplete="current-password" required></div>
@@ -440,7 +440,7 @@ label.tg{display:flex;align-items:center;gap:6px;text-transform:none;letter-spac
 <div class="app">
   <header class="nav" id="nav">
     <div class="navin">
-      <a class="brand" href="#dash" id="brand" title="Go to home screen"><div class="mark">GS</div><b>Gopin Semicon Private Limited</b></a>
+      <a class="brand" href="#dash" id="brand" title="Go to home screen"><div class="mark">GS</div><b>Human Tech Innovative Technology</b></a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰ Menu</button>
       <div class="navr">
         <span class="sync" id="sync"><span class="dot"></span>Connecting…</span>
@@ -1224,7 +1224,7 @@ function renderWho(){const w=$('#who');if(!w)return;if(!me.id){w.innerHTML='';re
  <div class="mdd"><div class="wb"><div class="wbt">${avHTML(myE,me.name,'av lg')}<div><b>${esc(myE?empFull(myE):me.name)}</b>${myE?.designation||me.designation?`<div class="muted" style="font-size:12px">${esc(myE?.designation||me.designation)}</div>`:''}</div></div><div class="muted" style="font-size:12px">${esc(me.email)}</div><div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px">${me.roles.map(r=>`<span class="pill p-acc">${esc(r)}</span>`).join('')}</div></div>
  <button class="ml" data-act="chpw">Change password</button>${canInstall()?'<button class="ml" data-act="installapp">Install app</button>':''}<button class="ml" data-act="logout">Sign out</button></div>`}
 function setTitle(nm){nm=String(nm||'').trim();if(!nm)return;if(document.title!==nm)document.title=nm;try{localStorage.setItem('erp_title',nm)}catch(e){}}
-function brandHTML(){const nm=company.name||'Gopin Semicon Private Limited';if(company.name)setTitle(company.name);return (company.logo?`<img class="logo" src="${esc(company.logo)}" alt="">`:`<div class="mark">${esc(initials(nm))}</div>`)+`<span class="bt"><b>${esc(nm)}</b><span class="tag">Manufacturing ERP</span></span>`}
+function brandHTML(){const nm=company.name||'Human Tech Innovative Technology';if(company.name)setTitle(company.name);return (company.logo?`<img class="logo" src="${esc(company.logo)}" alt="">`:`<div class="mark">${esc(initials(nm))}</div>`)+`<span class="bt"><b>${esc(nm)}</b><span class="tag">Manufacturing ERP</span></span>`}
 function navLinks(it){const secs=[...new Set(it.map(x=>x[2]||''))];return secs.map(sc=>(secs.length>1&&sc?`<div class="mh">${esc(sc)}</div>`:'')+it.filter(x=>(x[2]||'')===sc).map(([k,l])=>`<a href="#${k}" class="${st.view===k?'on':''}">${esc(l)}</a>`).join('')).join('')}
 function renderChrome(){
  $('#brand').innerHTML=brandHTML();
@@ -1580,7 +1580,7 @@ function menuOrderHTML(){if(!st.mo)st.mo=navOrdered().map(x=>x[0]);const L=st.mo
  <section class="tab"><h2>Main menu order (All menus)</h2><div class="body"><ol class="molist" id="molist">${L.map((g,i)=>`<li draggable="${!ro}" data-g="${esc(g)}"><span class="mgrip" aria-hidden="true">⋮⋮</span><span class="mic2">${LNCH_ICON(LNCH_PATHS[g]?g:'grid')}</span><b>${esc(g)}</b><span class="muted">${cnt(g)} page${cnt(g)===1?"":"s"}</span><span class="sp"></span>
   ${ro?'':`<button class="btn sm" data-act="mo-mv" data-i="${i}" data-d="-1" ${i?'':'disabled'} aria-label="Move ${esc(g)} up">↑</button><button class="btn sm" data-act="mo-mv" data-i="${i}" data-d="1" ${i<L.length-1?'':'disabled'} aria-label="Move ${esc(g)} down">↓</button>`}</li>`).join('')}</ol>
  <p class="hint">This order is used for the module tiles in “All menus” for every user, after you click Save. Each user still sees only the modules their role allows.</p></div></section>`}
-function loaderLogo(){let src=company.logo||'';if(!src)try{src=localStorage.getItem('erp_logo')||''}catch(e){}return src?`<img src="${esc(src)}" alt="">`:`<b>${esc(initials(company.name||'Gopin Semicon'))}</b>`}
+function loaderLogo(){let src=company.logo||'';if(!src)try{src=localStorage.getItem('erp_logo')||''}catch(e){}return src?`<img src="${esc(src)}" alt="">`:`<b>${esc(initials(company.name||'Human Tech'))}</b>`}
 function loaderHTML(msg){return `<div class="ldr" role="status"><div class="lspin"><span class="lring"></span><span class="llogo">${loaderLogo()}</span></div>${msg?`<span class="lmsg">${esc(msg)}</span>`:''}</div>`}
 const UI_SIZES=['12','13','14','15','16','17','18'];
 const OT_F=[{k:'otBase',l:'OT rate based on',t:'sel',o:['Gross','Basic + DA']},{k:'otDays',l:'÷ days per month',t:'num'},{k:'otHrsDay',l:'÷ hours per day',t:'num'},{k:'otMult',l:'× multiplier (Factories Act = 2)',t:'num'},{k:'otMin',l:'Minimum OT counted (minutes)',t:'num'}];
@@ -1605,7 +1605,7 @@ function companyHTML(){if(!coDirty){coDraft=clone(company);if(!coDraft.fy)coDraf
  <section class="tab"><h2>Overtime (OT)</h2><div class="body"><div class="fgrid">${OT_F.map(f=>`<div class="fld"><label for="c_${f.k}">${esc(f.l)}</label>${inputHTML(f,coDraft[f.k]??OT_DEF[f.k],ro,`id="c_${f.k}" data-ck="${f.k}"`)}</div>`).join('')}</div>
   <p class="hint">OT per hour = ${esc(coDraft.otBase||'Gross')} ÷ ${esc(coDraft.otDays||26)} ÷ ${esc(coDraft.otHrsDay||8)} × ${esc(coDraft.otMult??2)}. Counted only for employees ticked “Eligible for overtime” in Employee Master. On a working day OT = hours beyond the shift; on a weekly off / holiday all hours count, unless a comp-off is taken for that day.</p></div></section>
  <section class="tab"><h2>Font & text size</h2><div class="body"><div class="fgrid">${LOOK_F.map(f=>`<div class="fld"><label for="c_${f.k}">${esc(f.l)}</label>${inputHTML(f,coDraft[f.k]||(f.k==='uiFont'?'Aptos Display':'14'),ro,`id="c_${f.k}" data-ck="${f.k}"`)}</div>`).join('')}
-  <div class="fld w2"><label>Preview</label><div class="fprev" style="font-family:'${esc(coDraft.uiFont||'Aptos Display')}',sans-serif">Gopin Semicon — Purchase Order PO-0001 · ₹ 12,34,567.00 · TOPCon cell line</div></div></div>
+  <div class="fld w2"><label>Preview</label><div class="fprev" style="font-family:'${esc(coDraft.uiFont||'Aptos Display')}',sans-serif">Human Tech — Purchase Order PO-0001 · ₹ 12,34,567.00 · TOPCon cell line</div></div></div>
   <p class="hint">Applies to every user and every screen after you click Save. Aptos fonts show on Windows / Office computers; other devices use a close system font.</p></div></section>
  <section class="tab"><h2>Company details</h2><div class="body"><div class="fgrid">${CO_F.map(f=>`<div class="fld ${f.w?'w2':''}"><label for="c_${f.k}">${esc(f.l)}</label>${inputHTML(f,coDraft[f.k]??'',ro,`id="c_${f.k}" data-ck="${f.k}"`)}</div>`).join('')}</div></div></section>${resetSectionHTML()}`}
 
@@ -2522,7 +2522,7 @@ function payslipBody(run,l){const e=get('employees',l.emp)||{},c=payCalc(l),pr=x
  const sumE=E.reduce((t,x)=>t+x[1],0);if(E.length&&sumE!==c.tot){const j=E.findIndex(x=>/special/i.test(x[0]));E[j>=0?j:0][1]+=c.tot-sumE}   // rounding goes to the last line
  const D=[['Provident Fund',c.pf],['ESIC',c.esic],['Professional Tax',c.pt],['TDS',c.tds],['Canteen',n(l.canteen)],['Advance / other',n(l.advance)]].filter(x=>x[1]);const rows=Math.max(E.length,D.length);
  const info=(a,b)=>`<tr><th>${a}</th><td>${esc(b||'—')}</td></tr>`;
- return `<div class="psh"><div><b>${esc(co.legal||co.name||'Gopin Semicon Private Limited')}</b><div class="pss">${esc(co.address||'').replace(/\n/g,', ')}</div></div><div class="pst">Salary Slip<br><span>${esc(monthName(run.month))}</span></div></div>
+ return `<div class="psh"><div><b>${esc(co.legal||co.name||'Human Tech Innovative Technology')}</b><div class="pss">${esc(co.address||'').replace(/\n/g,', ')}</div></div><div class="pst">Salary Slip<br><span>${esc(monthName(run.month))}</span></div></div>
  <div class="psg"><table>${info('Employee',empFull(e)+' ('+l.emp+')')}${info('Designation',e.designation)}${info('Department',dep)}${info('Date of joining',e.doj?fmtD(e.doj):'')}</table>
  <table>${info('UAN / PF',e.uan)}${info('ESIC No.',e.esic)}${info('PAN',e.pan)}${info('Bank A/c',(e.bankName?e.bankName+' · ':'')+(e.bankAc||''))}${info('Days in month / paid',`${n(l.days)} / ${dq(Math.min(n(l.paid),n(l.days)))}`)}</table></div>
  <table class="pse"><thead><tr><th>Earnings</th><th class="num">₹</th><th>Deductions</th><th class="num">₹</th></tr></thead><tbody>
@@ -2548,7 +2548,7 @@ function pmsSummaryHTML(d){const L=(d.lines||[]).filter(l=>l.kra),w=L.reduce((t,
 const STD_KRA=[['Production / output target achievement',30,'Monthly plan vs actual'],['Quality — yield, rejection & customer complaints',25,'Yield %, NCRs'],['Safety & 5S compliance',15,'Zero LTI, audit score'],['Cost / waste reduction & improvements',15,'Kaizens, savings ₹'],['Teamwork, discipline & learning',15,'Attendance, trainings']];
 function mprSummaryHTML(d){const C=list('candidates').filter(c=>c.mpr===d.no),by=s=>C.filter(c=>c.stage===s).length,j=by('Joined'),k=(l,v)=>`<div class="kpi"><span>${l}</span><b>${v}</b></div>`;
  return d.no?`<div class="kpis">${k('Positions',n(d.positions))}${k('Joined',j)}${k('Open',Math.max(0,n(d.positions)-j))}${k('Candidates',C.length)}${k('Interview',by('Interview'))}${k('Offered',by('Offered'))}</div>`:'<p class="muted">Save to start tracking candidates against this requisition.</p>'}
-function letterText(d){const co=company.legal||company.name||'Gopin Semicon Private Limited',off=d.type==='Offer Letter',e=off?(get('candidates',d.cand)||{}):(get('employees',d.emp)||{});
+function letterText(d){const co=company.legal||company.name||'Human Tech Innovative Technology',off=d.type==='Offer Letter',e=off?(get('candidates',d.cand)||{}):(get('employees',d.emp)||{});
  const nm=(off?e.name:empFull(e))||'[Name]',des=e.designation||'[Designation]',dep=get('departments',e.dept)?.name||'',ctc=n(d.ctc)?inr(n(d.ctc)).replace('.00',''):'[CTC]',eff=d.effDate?fmtD(d.effDate):'[Date]';
  const doj=fmtD(e.doj||e.joinDate||d.effDate||''),dol=fmtD(e.dol||d.effDate||''),sal=`Dear ${nm},\n\n`;
  const T={
@@ -2806,7 +2806,7 @@ function xlSheet(wb,name,head,rows,opt={}){const ws=wb.addWorksheet(xlName(name)
  head.forEach((h,i)=>{const w=Math.max(String(h).length,...rows.slice(0,300).map(r=>String(r[i]??'').length));ws.getColumn(i+1).width=Math.min(48,Math.max(10,w+2))});
  return ws}
 async function exportAoa(base,head,rows,extra){let X;try{X=await loadExcel()}catch(e){toast('Excel library didn’t load. Check your connection and reload.',1);return}
- const wb=new X.Workbook();wb.creator=company.name||'Gopin ERP';wb.created=new Date();
+ const wb=new X.Workbook();wb.creator=company.name||'Human Tech ERP';wb.created=new Date();
  const ws=xlSheet(wb,base,head,rows);if(extra)extra(wb,ws);
  const buf=await wb.xlsx.writeBuffer();saveFile(`${base}_${today()}.xlsx`,new Uint8Array(buf))}
 function exportList(){const v=st.view,c=ENT[v];let h=flatHeaders(c),rs=rowsFor(v);
@@ -3072,7 +3072,7 @@ async function viewClick(e,t){if(!t){if(st.pop){st.pop=false;render()}return}
   case'mkpo':{const sh=planRows().filter(x=>x.short>0);openNew('pos',{remarks:'Raised from material planning',lines:sh.map(x=>({item:x.item,qty:+x.short.toFixed(3),rate:x.rate}))});break}
   case'cosave':{if(!String(coDraft.name||'').trim()){toast('Company Name is required.',1);break}const prev=company;company=clone(coDraft);
    try{if(!company.logo)delete company.icons;else if(iconsStale(company))company.icons=await makeIcons(company.logo);await API.j('PUT','/api/docs/settings/company',company);coDirty=false;applyIcons();applyLook();toast(company.logo?'Company details saved — app icon updated from the logo':'Company details saved');renderChrome()}catch(e){company=prev;wErr(e)}break}
-  case'backup':{try{const r=await API.j('GET','/api/backup');saveFile(`gopin-erp-backup_${today()}.json`,JSON.stringify(r,null,1))}catch(x){toast(x.message,1)}break}
+  case'backup':{try{const r=await API.j('GET','/api/backup');saveFile(`human tech-erp-backup_${today()}.json`,JSON.stringify(r,null,1))}catch(x){toast(x.message,1)}break}
   case'uroles':{const u=USERS[t.dataset.uid];if(!u)break;const cur=rolesOf(u.role);
    modal(`<h2>Roles for ${esc(u.name)}</h2><p class="muted">Every user always gets <b>${esc(R.BASE)}</b> — the HR menu for their own leave, attendance, gate pass and salary slip. Tick a role below only if this person needs other ERP pages; menus and permissions combine all ticked roles.</p><div class="rolechk" style="flex-direction:column">${Object.keys(ROLES).filter(r=>r!=='Viewer'&&r!==R.BASE).map(r=>`<label><input type="checkbox" name="mrole" value="${r}" ${cur.includes(r)?'checked':''}> <b>${r}</b> <span class="muted" style="font-size:12px">— ${esc(ROLES[r].d)}</span></label>`).join('')}</div><div class="acts"><button class="btn" data-act="mclose">Cancel</button><button class="btn pri" data-act="dosaveroles" data-uid="${esc(u.id)}">Save roles</button></div>`);break}
   case'seradd':{const v=t.dataset.sv,f=ENT[v].fields.find(f=>f.t==='sel'||(f.t==='dyn'&&!f.needs&&f.k==='type')||(f.t==='ref'&&f.r==='itemtypes'));serDraft[v].rules=serDraft[v].rules||[];serDraft[v].rules.push({f:f.k,val:'',prefix:'',digits:serDraft[v].digits||4,start:1});serDirty=true;render();break}
@@ -3201,7 +3201,7 @@ async function installApp(){
 // Phones pause the connection in the background; catch up as soon as the app is opened again.
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&me.id&&(!ws||ws.readyState>1)){wsTry=0;loadAll().catch(()=>{});connectWS()}});
 
-fetch('/api/brand').then(r=>r.json()).then(b=>{if(!b)return;setTitle(b.name);const el=$('#lbrand');if(el)el.innerHTML=(b.logo?`<img class="logo" src="${esc(b.logo)}" alt="" style="height:40px;width:auto;max-width:140px;object-fit:contain">`:`<div class="mark">${esc(initials(b.name||'GS'))}</div>`)+`<div><b>${esc(b.name||'Gopin Semicon Private Limited')}</b><small>Manufacturing ERP · sign in</small></div>`}).catch(()=>{});
+fetch('/api/brand').then(r=>r.json()).then(b=>{if(!b)return;setTitle(b.name);const el=$('#lbrand');if(el)el.innerHTML=(b.logo?`<img class="logo" src="${esc(b.logo)}" alt="" style="height:40px;width:auto;max-width:140px;object-fit:contain">`:`<div class="mark">${esc(initials(b.name||'GS'))}</div>`)+`<div><b>${esc(b.name||'Human Tech Innovative Technology')}</b><small>Manufacturing ERP · sign in</small></div>`}).catch(()=>{});
 try{applyLook(JSON.parse(localStorage.getItem('erp_look')||'{}'))}catch(e){}
 route();
 if(!me.id)V.innerHTML=`<div class="pload">${loaderHTML('Loading…')}</div>`;
