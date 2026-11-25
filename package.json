@@ -1,7 +1,7 @@
 {
-  "name": "gopin-erp",
+  "name": "Human Tech",
   "version": "1.0.0",
-  "description": "Gopin Semicon Private Limited — manufacturing ERP (masters, purchase, production, sales, GST invoices, batches, gate passes, roles)",
+  "description": "Human Tech Innovative Technology — manufacturing ERP (masters, purchase, production, sales, GST invoices, batches, gate passes, roles)",
   "private": true,
   "main": "server.js",
   "engines": { "node": ">=18" },
