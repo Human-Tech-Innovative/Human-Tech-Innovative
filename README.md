@@ -1,4 +1,4 @@
-# Gopin Semicon Private Limited — ERP
+# Human Tech Innovative Technology — ERP
 
 Apne server aur apne database par chalne wala manufacturing ERP.
 
