@@ -480,7 +480,7 @@ app.get('/api/backup', auth, (req, res, next) => { const r = parseRoles(req.user
   try {
     const { rows } = await db.q('SELECT collection, id, data, updated_at FROM docs ORDER BY collection, id');
     const log = req.query.log === '0' ? [] : (await db.q('SELECT id, at, user_id, user_name, collection, doc_id, action, data FROM audit ORDER BY id')).rows;
-    res.json({ app: 'gopin-erp', exportedAt: new Date().toISOString(), docs: rows, log });
+    res.json({ app: 'Human Tech', exportedAt: new Date().toISOString(), docs: rows, log });
   } catch (e) { next(e); }
 });
 
